@@ -1,8 +1,9 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
-import org.openqa.selenium.By;
+import org.openqa.selenium.HasCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class SimpleGoogleTest {
 
@@ -11,7 +12,11 @@ public class SimpleGoogleTest {
     @Before
     public void googleTest_setup(){
         WebDriverManager.chromedriver().setup();
-        drv = new ChromeDriver();
+
+        ChromeOptions opt = new ChromeOptions();
+        //opt.setHeadless(true);
+        opt.addArguments("start-fullscreen");
+        drv = new ChromeDriver(opt);
     }
 
     @After
@@ -23,9 +28,7 @@ public class SimpleGoogleTest {
     @Test
     public void googleTest(){
         drv.get("https://google.com");
-        drv.findElement(By.name("q")).sendKeys("Selenium");
-        drv.findElement(By.name("btnK")).click();
 
+        System.out.println(((HasCapabilities) drv).getCapabilities());
     }
-
 }

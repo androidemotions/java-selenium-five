@@ -16,3 +16,7 @@ dependencies {
     compile 'org.seleniumhq.selenium:selenium-java:3.141.59'
     compile("io.github.bonigarcia:webdrivermanager:3.3.0")
 }
+
+test {
+    maxParallelForks = 4
+}
