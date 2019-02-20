@@ -53,6 +53,7 @@ public class ImmutableInteractions extends TestBase {
 
         WebElement invisible = driver.findElement(By.id("invisible"));
         WebElement spaces = driver.findElement(By.id("spaces"));
+        WebElement div = driver.findElement(By.id("div"));
 
         System.out.println("GetInvisibleText: " + invisible.getText());
         System.out.println("GetInvisibleAttr: " + invisible.getAttribute("textContent"));
@@ -61,6 +62,9 @@ public class ImmutableInteractions extends TestBase {
 
         System.out.println("GetSpacesText: " + spaces.getText());
         System.out.println("GetSpacesAttr: " + spaces.getAttribute("textContent"));
+
+        System.out.println("GetTextForNestedElements: " + div.getText());
+        System.out.println("GetAttrForNestedElements: " + div.getAttribute("textContent"));
     }
 
     @Test

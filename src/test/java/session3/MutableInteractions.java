@@ -57,7 +57,7 @@ public class MutableInteractions extends TestBase {
 
 
     @Test
-    public void ivisibleTest() {
+    public void invisibleTest() {
 
         driver.navigate().to("http://cssglobe.com/lab/style_select/01.html");
         WebElement selectEl = driver.findElement(By.cssSelector("select"));
