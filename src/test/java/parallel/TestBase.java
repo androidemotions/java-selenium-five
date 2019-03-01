@@ -30,8 +30,8 @@ public class TestBase {
 
 //        opt.setHeadless(false);
 //        opt.setExperimentalOption("w3c", true);
-//        driver = new ChromeDriver(opt);
-        driver = new FirefoxDriver();
+       driver = new ChromeDriver();
+       // driver = new FirefoxDriver();
         wait = new WebDriverWait(driver,10);
 
         tlDriver.set(driver);
