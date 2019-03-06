@@ -31,7 +31,6 @@ public class SimpleGoogleTest {
     public void googleTest() {
         drv.get("https://google.com");
         drv.findElement(By.name("q")).sendKeys("Selenium" + Keys.ENTER);
-        ;
         System.out.println(((HasCapabilities) drv).getCapabilities());
     }
 }
